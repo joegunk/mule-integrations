@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="orders-apiFlow" doc:id="00aa30e1-4047-40eb-8bd5-b2fc8c9cbadf" >
 		<http:listener doc:name="Listener" doc:id="a0ac442f-8e77-4f5f-8e3b-a884957e6da1" config-ref="HTTP_Listener_config" path="/api/order" allowedMethods="GET"/>
 		<logger level="INFO" doc:name="Logger" doc:id="6007a998-16a8-488a-889c-078fc8016f7c" message="Get order request received"/>
+		<flow-ref doc:name="orders-apiFlow" doc:id="159841af-cd49-4ad0-9bc6-fd38e490b72f" name="orders-apiFlow"/>
 	</flow>
 </mule>

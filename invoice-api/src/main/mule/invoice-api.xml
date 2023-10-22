@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="777e1401-9a1d-4218-82af-dcc6d2925cca" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="invoice-apiFlow" doc:id="826806bb-54cc-408c-a27b-3708e85e4f76" >
+		<http:listener doc:name="Listener" doc:id="238d914b-4dd1-452d-aa47-b4bd70772a16" config-ref="HTTP_Listener_config" path="/api/invoice"/>
+		<logger level="INFO" doc:name="Logger" doc:id="9eafa2ae-9510-4b2b-9ec7-a827d6b5a1a0" message="Get invoice process started"/>
+	</flow>
+</mule>
