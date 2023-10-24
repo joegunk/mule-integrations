@@ -10,6 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="charge-apiFlow" doc:id="f374739b-90c7-46a4-880f-3f067134c278" >
 		<http:listener doc:name="Listener" doc:id="5dd9bc37-8a63-4269-9f82-dc6a48d155e4" config-ref="HTTP_Listener_config" path="/api/charge"/>
 		<logger level="INFO" doc:name="Logger" doc:id="91bf1b26-51a7-4d52-b86b-7f0478634b00" message="Get charges process started"/>
-		<logger level="INFO" doc:name="Logger" doc:id="c3a8137a-8768-44e0-8fe5-b6e219eceea9" message="Get charges process complete"/>
+		<logger level="INFO" doc:name="Logger" doc:id="c3a8137a-8768-44e0-8fe5-b6e219eceea9" message="Get charges process COMPLETE"/>
 	</flow>
 </mule>
