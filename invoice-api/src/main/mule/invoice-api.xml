@@ -11,6 +11,5 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:listener doc:name="Listener" doc:id="238d914b-4dd1-452d-aa47-b4bd70772a16" config-ref="HTTP_Listener_config" path="/api/invoice"/>
 		<logger level="INFO" doc:name="Logger" doc:id="9eafa2ae-9510-4b2b-9ec7-a827d6b5a1a0" message="Get invoice process started some more text"/>
 		<logger level="INFO" doc:name="Logger" doc:id="388b3973-49e0-40b8-be4f-877efd51b941" message="Get invoice process COMPLETE"/>
-		<logger level="INFO" doc:name="Logger" doc:id="388b3973-49e0-40b8-be4f-877efd51b942" message="Added another logger just for fun"/>
 	</flow>
 </mule>
