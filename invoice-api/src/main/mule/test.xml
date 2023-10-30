@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<error-handler name="testError_Handler" doc:id="a615bd02-c9ca-4243-a91c-a2e9e245c918" >
+		<on-error-continue enableNotifications="true" logException="true" doc:name="On Error Continue" doc:id="69350443-6cf8-4d8a-ae6b-d09dec8d2fc2" >
+			<logger level="INFO" doc:name="Logger" doc:id="ffb4c61f-aaba-4e7f-b777-3ddea088b14e" message="test error"/>
+			<ee:transform doc:name="Transform Message" doc:id="2b3cd700-345c-4672-9a56-177b45c1b0cb" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+			<ee:transform doc:name="Transform Message" doc:id="491dbc74-bef9-4143-bc0b-cdbf2e6e6361" >
+				<ee:message >
+					<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</on-error-continue>
+	</error-handler>
+</mule>
